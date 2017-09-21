@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,6 +18,7 @@ import { SearchComponent } from './search/search.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: SearchComponent },
