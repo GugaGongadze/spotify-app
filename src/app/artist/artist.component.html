@@ -1,3 +1,27 @@
 <div *ngIf="artist">
-  {{ artist.name }}
+  <header class="artist-header">
+    <div *ngIf="artist.images.length > 0">
+      <img src="{{ artist.images[0].url }}" class="artist-thumb img-circle">
+    </div>
+    <h1><a href="https://open.spotify.com/artist/{{ artist.id }}" target="_blank">{{ artist.name }}</a></h1>
+    <p *ngIf="artist.genres.length > 0">
+      <strong>Genres: </strong><span *ngFor="let genre of artist.genres">{{ genre }}&nbsp;</span>
+    </p>
+  </header>
+
+  <div class="artist-albums">
+    <div class="row">
+      <div *ngFor="let album of albums">
+        <div class="col-md-3">
+          <div class="well album">
+            <div *ngIf="album.images.length > 0"  class="text-center">
+              <img src="{{album.images[0].url}}" class="album-thumb img-thumbnail">
+              <strong>{{album.name}}</strong>
+              <a routerLink="/album/{{album.id}}" class="btn btn-default btn-block button">Album Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
