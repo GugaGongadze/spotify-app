@@ -15,7 +15,7 @@ export class SpotifyService {
     this.searchUrl = 'https://api.spotify.com/v1/search?q=' + str + '&type=' + type + '&market-US';
 
     // tslint:disable-next-line:max-line-length
-    return this._http.get(this.searchUrl + '&access_token=BQDoM7eAsbU37wWW7K5lRVDjmSkwGru80sZy_LZdQeoKdWcMymYNehPM-OmAkCJuDec-WY6QgyNaamQLx3TXl8uMMwrW_BWb01P2lv9qCTZXrt4vhqKLiNSutK3WSp2jrmmdHYZWGNZ8mp7CJeerbVA6diTs')
+    return this._http.get(this.searchUrl + '&access_token=BQBHKECgxPwksqnpkjLGgcHychnQZ4eTYoYo6Ycbo0OrAEt7c4cwDRCpf_ntR4sA7b7-1WawOm7DFEhla4XIk9yEoFhAzO3CJ6FLOAwMyVBEwDv-mmB4-G1fDj0Oy2SNIspKZMqlQrXbUA4ul5RyommtFqO2')
                 .map(res => res.json());
   }
 
